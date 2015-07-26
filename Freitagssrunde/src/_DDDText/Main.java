@@ -3,6 +3,7 @@ package _DDDText;
 public class Main {
 	
 	private static DDDText text = new DDDText();
+	private static NewFontAlpha newText = new NewFontAlpha();
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -25,7 +26,24 @@ public class Main {
 				System.out.println(text.letters[i][j]);
 			}
 		}
-		
+		{
+			String[] halloPeter = newText.getStringArray('A');
+			for(int i = 0; i < halloPeter.length; ++i){
+				System.out.println(halloPeter[i]);
+			}
+		}
+		{
+			String[] halloPeter = newText.getStringArray('B');
+			for(int i = 0; i < halloPeter.length; ++i){
+				System.out.println(halloPeter[i]);
+			}
+		}
+		{
+			String[] halloPeter = newText.getStringArray('C');
+			for(int i = 0; i < halloPeter.length; ++i){
+				System.out.println(halloPeter[i]);
+			}
+		}
 		
 	}
 
