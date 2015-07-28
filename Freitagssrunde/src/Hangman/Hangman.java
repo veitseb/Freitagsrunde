@@ -24,6 +24,7 @@
 
 package Hangman;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +37,9 @@ public class Hangman {
 	private static String suchWort;
 	private static String gefundenesWort;
 
-	public static void main(String[] arguments) {
+	public static void main(String[] arguments) throws IOException {
+		WoerterLesen lesen = new WoerterLesen();
+		List<String> list = lesen.getList();
 		suchWort = Terminal.readString();
 		System.out.println("zu suchendes Wort: " + suchWort);
 		
@@ -80,7 +83,7 @@ public class Hangman {
 			else
 				continue;				
 		}
-		
+		 	
 		gefundenesWort = new String(gefundenesWortChar);
 		
 		System.out.println(gefundenesWort);
